@@ -1,0 +1,42 @@
+{
+  "students": [
+    {
+      "firstName": "Alex change",
+      "lastName": "Zanfir",
+      "id": 0
+    },
+    {
+      "firstName": "Jane b",
+      "lastName": "Doe",
+      "id": 1
+    },
+    {
+      "firstName": "Kevin",
+      "lastName": "Bacon",
+      "id": 2
+    },
+    {
+      "firstName": "T",
+      "lastName": "Rex",
+      "id": 3
+    },
+    {
+      "firstName": "New",
+      "lastName": "Student",
+      "id": 4
+    },
+    {
+      "firstName": "Newer A",
+      "lastName": "Student",
+      "id": 5
+    },
+    {
+      "firstName": "Action",
+      "lastName": "Student",
+      "id": 6
+    },
+    {
+      "id": 7
+    }
+  ]
+}
