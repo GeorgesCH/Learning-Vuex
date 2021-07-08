@@ -43,7 +43,7 @@ export default new Vuex.Store({
     actions: {
         async getStudents(context) {
             try {
-                const students = (await axios.get('http://localhost:3000/students')).data;
+                const students = (await axios.get('/students')).data;
                 context.commit('setStudents', students);   
             } catch (error) {
                 context.commit('showError', error);
@@ -51,11 +51,11 @@ export default new Vuex.Store({
 
         },
         async createStudent(context, names ) {
-            const student = (await axios.post("http://localhost:3000/students", names )).data;
+            const student = (await axios.post("/students", names )).data;
             context.commit('addStudent', student);
         },
         async editStudent(context, {id, names}) {
-            const student = (await axios.put(`http://localhost:3000/students/${id}`, names)).data;
+            const student = (await axios.put(`/students/${id}`, names)).data;
             context.commit('editStudent', student);
         }
     },
