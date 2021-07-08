@@ -43,7 +43,7 @@ export default new Vuex.Store({
     actions: {
         async getStudents(context) {
             try {
-                const students = (await axios.get('https://george-a-learning-vuex-nbguavgdw-georgesch.vercel.app/students')).data;
+                const students = (await axios.get('https://george-a-learning-vuex.vercel.app/students')).data;
                 context.commit('setStudents', students);   
             } catch (error) {
                 context.commit('showError', error);
@@ -51,11 +51,11 @@ export default new Vuex.Store({
 
         },
         async createStudent(context, names ) {
-            const student = (await axios.post("https://george-a-learning-vuex-nbguavgdw-georgesch.vercel.app/students", names )).data;
+            const student = (await axios.post("https://george-a-learning-vuex.vercel.app/students", names )).data;
             context.commit('addStudent', student);
         },
         async editStudent(context, {id, names}) {
-            const student = (await axios.put(`https://george-a-learning-vuex-nbguavgdw-georgesch.vercel.app/students/${id}`, names)).data;
+            const student = (await axios.put(`https://george-a-learning-vuex.vercel.app/students/${id}`, names)).data;
             context.commit('editStudent', student);
         }
     },
